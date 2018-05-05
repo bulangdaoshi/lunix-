@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户密码找回</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            font-size: 30px;
+            font-weight: bold;
+            color: blue;
+            margin: auto auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>用户你的{{ request.session.email }}密码丢失,可能你验证码不匹配，请等几秒跳转找回密码页面</h1>
+</body>
+<script>
+    function login() {
+    window.location.href = 'http://127.0.0.1:8000/user/forget/';
+    }
+    window.setTimeout(login,5000);
+</script>
+</html>
