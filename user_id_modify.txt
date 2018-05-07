@@ -1,0 +1,38 @@
+lniux 操作用户
+
+useradd 用户名 新增用户
+
+passwd 设定密码
+
+案例：
+
+passwd xiaowu （修改用户名xiaowu的密码）
+
+etc：存放配置文件
+
+ls /etc/passwd (查看用户信息)
+
+less /etc/passwd (浏览用户文件里信息)
+
+案例：
+
+root : x: 0: 0: root: /root:/bin/bash
+(root用户名)-（x密码占位符）-（500以前都是超级用户，之后都是普通用户）-（组id）-（家目录）-（bin/bash是允许登录 | nologin不允许登录）
+
+
+ ls /etc/shadow (查看用户密码）
+
+ls /etc/gshadow(查看组密码)
+
+ls /etc/group(查看用户组信息)
+
+ls /var/spool/mail/用户名 （用户邮箱）
+
+id 用户名（用户信息）
+
+less /ect/group (用户组里面的信息)
+
+案例：
+
+users : x: 100:   (这后面是组成员) 》》》》可以通过vim在这后面加   如： users; x: 100: users xiaowu lw (后面都是 组id100 的成员)
+
