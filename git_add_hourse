@@ -1,0 +1,6 @@
+git 切换到一个远程仓库
+二、先删后加
+git remote rm origin
+git remote add origin git@github.com:sheng/demo.git
+
+暂时理解就是这种方法
