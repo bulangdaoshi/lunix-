@@ -1,0 +1,61 @@
+
+
+把权限改成755
+
+第一中
+
+chomd 755 （目标文件）
+
+第二中
+
+chomd u=rwx,g=rx,o=rx (目标文件）)
+
+
+文件操作
+-------------
+符号 > （把左边的内容覆盖到右边内容）
+
+cat /etc/passwd > new_pass.txt (没有文件，则先创建在覆盖)
+
+符号 >> （把左边的内容追加到右边内容）
+
+合并文件
+
+cat /etc/passwd/etc/gruop > a.txt
+
+wc-l /etc/passwd (查看文件多少行)
+
+管道符的用法
+
+cat /etc/passwd/ | wc-l
+
+归档文件
+
+命令：tar -cvf test.tar a.txt b.txt c.txt
+
+c:创建一个新的tar文件
+
+v： 显示所有打包文件的详细信息
+
+f： 指定归档文件（这里就是test。txt）
+
+tar -tf test.tar(查看文件)
+
+t: 列出tar文件中的目录的内容
+
+----------------
+压缩文件
+
+gzip test.txt
+
+解压 
+
+gunzip test.txt
+
+
+tar -czvf test.tar.gz a.txt b.txt c.txt
+
+解包
+
+tar xvf /tmp/test1.tar.gz -C /opt/
+
