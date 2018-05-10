@@ -1,0 +1,9 @@
+1、首先是bios加电自检、初始化，这个过程会检测相关硬件(cpu、内存、硬盘等)，然后会读取硬盘中的MBR；
+2、加载内核，读取/boot里边的配置文件；
+3、启动初始化进程，开始运行/sbin/init；
+4、读取/etc/inittab，确定运行级别；
+5、按照预定好的顺序加载/etc/rc.d/init.d中的开机启动程序，
+再加载/etc/rc.d/rc.local中的开机启动程序；
+6、用户登录；
+7、进入shell,以命令行为例，
+首先读取/etc/profile这个全局配置文件,然后再针对当前用户读取家目录中的~/.bash_profile和~/.bash_login和~/.profile。

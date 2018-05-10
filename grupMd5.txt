@@ -1,0 +1,31 @@
+一、明文加密：
+vim /etc/grub.conf
+在hiddemenu下面新增一行，输入：
+password 密文
+然后：wq保存退出
+
+在开机出现退数菜单的时候，按任意键，就会出现启动选择菜单，这时下面的英文提示你输入 p 编辑启动项或者直接回车启动系统
+
+输入 p 后，会出现提示密码输入
+
+密码输入正确后进入编辑状态
+
+二、加密密码
+执行命令grub-md5-crypt
+得到经过md5加密的密码
+
+vim /etc/grub.conf，将password改成
+password --md5 密文
+然后：wq保存退出
+
+也可以使用sha进行加密，输入
+grub-crypt
+
+vim /etc/grub.conf，将password改成
+password --encrypted 密文
+
+默认是进行sha-512加密，也可以指定加密方式：
+grub-crypt --sha-256
+
+具体的参数可以 man grub-crypt
+然后：wq保存退出
